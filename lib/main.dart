@@ -10,7 +10,7 @@ class AppRoot extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Library App',
-      theme: ThemeData.dark(),
+      theme: ThemeData.light(),
       home: HomePage(),
     );
   }
