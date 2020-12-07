@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => _HelloYouState();
+  State<StatefulWidget> createState() => _HomeContainer();
 }
 
-class _HelloYouState extends State<HomePage>{
-  @override
+class EmbeddedWidget extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return Text("Embedded widget", textDirection: TextDirection.ltr);
+  }
+}
+
+class _HomeContainer extends State<HomePage>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -14,8 +18,14 @@ class _HelloYouState extends State<HomePage>{
         backgroundColor: Colors.blueAccent,
       ),
       body: Container(
+        child: EmbeddedWidget(),
       ),
+
     );
   }
 
 }
+
+
+
+String mijnText = 'hoi hoi';
