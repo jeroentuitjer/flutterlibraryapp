@@ -19,24 +19,28 @@ class AppRoot extends StatelessWidget {
             indicatorColor: Colors.blue,
             labelColor: Colors.blue,
             tabs: [
-              Tab(
-                  icon: Icon(Icons.home),
-                  text: 'Red'),
-              Tab(
-                  icon: Icon(Icons.add_alarm),
-                  text: 'Blue'),
-              Tab(
-                  icon: Icon(Icons.save),
-                  text: 'Yellow'),
+              Tab(icon: Icon(Icons.home), text: 'Home'),
+              Tab(icon: Icon(Icons.add_alarm), text: 'Blue'),
+              Tab(icon: Icon(Icons.save), text: 'Yellow'),
             ],
           ),
           appBar: AppBar(
-              title: Text('Flutter Library App'), backgroundColor: Colors.pink),
+            title: Text(
+              'Flutter Library App',
+              style: TextStyle(
+                  color: Colors.amber,
+                  fontFamily: 'Open Sans',
+                  fontSize: 30,
+                  letterSpacing: 1.2,
+                  fontWeight: FontWeight.bold),
+            ),
+            backgroundColor: Colors.pink,
+          ),
           body: TabBarView(
             children: <Widget>[
+              HomePage(),
               AppTree(),
               MenuContainerSecond(),
-              MenuContainerThirth(),
             ],
           ),
         ),

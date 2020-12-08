@@ -3,9 +3,9 @@ import 'package:flutter/rendering.dart';
 import '../shared/headerwidget.dart';
 import 'menu.dart';
 
-/*class HomePage extends StatefulWidget {
+class HomePage extends StatefulWidget {
   State<StatefulWidget> createState() => _HomeContainer();
-}*/
+}
 
 class EmbeddedWidget extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -13,11 +13,9 @@ class EmbeddedWidget extends StatelessWidget {
   }
 }
 
-/*
 class _HomeContainer extends State<HomePage>{
   Widget build(BuildContext context) {
-    */
-/*       body: Container(
+    return Container(
           child: Column( children: <Widget>[
             Expanded(
               child: HeaderWidget(),
@@ -45,12 +43,10 @@ class _HomeContainer extends State<HomePage>{
           ),
         ],
       ),
-        ),*//*
+        );
+  }
 
-
-  },
-};
-*/
+}
 
 
 
