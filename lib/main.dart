@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'ui/home.dart';
 import 'ui/menu.dart';
+import 'ui/interaction.dart';
+import 'ui/form.dart';
 
 void main() {
   runApp(AppRoot());
@@ -13,7 +15,7 @@ class AppRoot extends StatelessWidget {
       title: 'Flutter Library App',
       theme: ThemeData.light(),
       home: DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
           bottomNavigationBar: TabBar(
             indicatorColor: Colors.blue,
@@ -22,6 +24,7 @@ class AppRoot extends StatelessWidget {
               Tab(icon: Icon(Icons.home), text: 'Home'),
               Tab(icon: Icon(Icons.add_alarm), text: 'Blue'),
               Tab(icon: Icon(Icons.save), text: 'Yellow'),
+              Tab(icon: Icon(Icons.add), text: 'Green'),
             ],
           ),
           appBar: AppBar(
@@ -40,7 +43,8 @@ class AppRoot extends StatelessWidget {
             children: <Widget>[
               HomePage(),
               AppTree(),
-              MenuContainerSecond(),
+              InteractionPage(),
+              FormPage(),
             ],
           ),
         ),
